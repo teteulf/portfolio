@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 
 const navData = [
   { name: "Home", path: "/", icon: <HiHome /> },
-  { name: "About", path: "/about_me", icon: <HiUser /> },
-  { name: "Contact", path: "/talk_to_me", icon: <HiEnvelope /> },
+  { name: "About me", path: "/about_me", icon: <HiUser /> },
+  { name: "Talk to me", path: "/talk_to_me", icon: <HiEnvelope /> },
   { name: "Projects", path: "/projects", icon: <HiViewColumns /> },
 ];
 
