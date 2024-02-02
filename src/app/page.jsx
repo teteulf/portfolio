@@ -1,14 +1,7 @@
-import Image from "next/image";
-import About from "./about_me/page";
-import Projects from "./projects/page";
-import Contact from "./talk_to_me/page";
-
-export default function Home() {
+export default function () {
   return (
     <>
-      <About />
-      <Projects />
-      <Contact />{" "}
+      <div className="text-white z-0">Home</div>
     </>
   );
 }
