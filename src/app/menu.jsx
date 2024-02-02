@@ -1,18 +1,17 @@
 "use client";
 import { HiUser, HiHome, HiEnvelope, HiViewColumns } from "react-icons/hi2";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 const navData = [
   { name: "Home", path: "/", icon: <HiHome /> },
-  { name: "About me", path: "/About_Me", icon: <HiUser /> },
-  { name: "Talk to me", path: "/Talk_To_Me", icon: <HiEnvelope /> },
-  { name: "Projects", path: "/Projects", icon: <HiViewColumns /> },
+  { name: "About me", path: "/about_me", icon: <HiUser /> },
+  { name: "Talk to me", path: "/talk_to_me", icon: <HiEnvelope /> },
+  { name: "Projects", path: "/projects", icon: <HiViewColumns /> },
 ];
 
 export default function Menu() {
-  const router = useRouter();
-  const pathname = router.pathname;
+  const pathname = usePathname();
   return (
     <div
       className="
@@ -27,9 +26,6 @@ export default function Menu() {
     >
       <nav className="flex xl:flex-col gap-6 ">
         {navData.map((link, index) => {
-          console.log("link.path:", link.path);
-          console.log("pathname:", pathname);
-          console.log("Condition:", link.path === pathname);
           return (
             <Link
               href={link.path}
