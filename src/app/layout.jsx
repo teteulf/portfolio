@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
         </header>
         <main className="flex items-center">
           <Menu />
+          {children}
         </main>
       </body>
     </html>
