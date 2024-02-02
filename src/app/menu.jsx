@@ -31,10 +31,19 @@ export default function Menu() {
               href={link.path}
               className={`${
                 link.path === pathname && "text-red-600"
-              } cursor-pointer`}
+              } cursor-pointer hover:text-red-600 transition-all duration-300`}
               key={index}
             >
-              <div>{link.icon}</div>
+              <div className="group flex items-center">
+                {link.icon}
+                <div className=" hidden absolute text-black right-[150%] bg-white rounded-[3px] group-hover:flex">
+                  {link.name}
+                </div>
+                <div
+                  className="hidden border-solid border-l-white border-l-8 
+                border-y-transparent border-y-[6px] border-r-0 absolute right-[130%] group-hover:flex"
+                ></div>
+              </div>
             </Link>
           );
         })}
