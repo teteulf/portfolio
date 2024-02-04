@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 
 const navData = [
   { name: "Home", path: "/", icon: <HiHome /> },
-  { name: "About", path: "/about_me", icon: <HiUser /> },
-  { name: "Contact", path: "/talk_to_me", icon: <HiEnvelope /> },
+  { name: "About", path: "/about", icon: <HiUser /> },
+  { name: "Contact", path: "/contact", icon: <HiEnvelope /> },
   { name: "Projects", path: "/projects", icon: <HiViewColumns /> },
 ];
 
@@ -36,14 +36,14 @@ export default function Menu() {
               <div className="group flex items-center">
                 {link.icon}
                 <div
-                  className=" hidden absolute text-black right-[150%]
+                  className=" hidden absolute text-black right-[120%]
                  bg-white rounded-[3px] group-hover:flex"
                 >
                   {link.name}
                 </div>
                 <div
                   className="hidden border-solid border-l-white border-l-8 
-                border-y-transparent border-y-[6px] border-r-0 absolute right-[133%] xl:group-hover:flex"
+                border-y-transparent border-y-[6px] border-r-0 absolute right-[103%] xl:group-hover:flex"
                 ></div>
               </div>
             </Link>
