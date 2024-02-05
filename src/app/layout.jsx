@@ -2,6 +2,7 @@ import { Inclusive_Sans } from "next/font/google";
 import "./globals.css";
 import Menu from "./menu";
 import HeaderLayout from "./head";
+import TopLefImg from "./topleftimg";
 
 const mainFontFamily = Inclusive_Sans({ subsets: ["latin"], weight: ["400"] });
 
@@ -15,6 +16,7 @@ export default function Layout({ children }) {
     <html className="bg-000014 bg-cover bg-no-repeat h-screen w-full overflow-hidden z-10">
       <body>
         <main>
+          <TopLefImg />
           <HeaderLayout />
           <Menu />
           {children}
